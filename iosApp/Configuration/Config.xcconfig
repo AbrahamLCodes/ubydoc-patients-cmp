@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=composetests
+PRODUCT_BUNDLE_IDENTIFIER=com.personal.cmptests.composetests.composetests$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
