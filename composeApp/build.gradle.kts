@@ -57,7 +57,15 @@ kotlin {
                 implementation(libs.precompose)
                 implementation(libs.precompose.viewmodel)
 
+                // 🎨 Icons
                 implementation("br.com.devsrsouza.compose.icons:font-awesome:1.1.1")
+
+                // Lottie
+                implementation(libs.compottie)
+                implementation(libs.compottie.lite)
+                implementation(libs.compottie.dot)
+                implementation(libs.compottie.network)
+                implementation(libs.compottie.resources)
             }
         }
         val androidMain by getting {
