@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
+import com.personal.cmptests.composetests.features.maintabs.HomeTabScreen.HomeTabScreen
+import com.personal.cmptests.composetests.features.maintabs.ProfileTabScreen.ProfileTabScreen
 import compose.icons.FontAwesomeIcons
 import compose.icons.fontawesomeicons.Solid
 import compose.icons.fontawesomeicons.solid.User
@@ -65,8 +67,8 @@ fun MainTabsScreen() {
             contentAlignment = Alignment.Center
         ) {
             when (selectedIndex) {
-                0 -> Text("👤 Profile Screen")
-                1 -> Text("🏠 Home Screen")
+                0 -> ProfileTabScreen()
+                1 -> HomeTabScreen()
                 2 -> Text("🛒 Cart Screen")
             }
         }
