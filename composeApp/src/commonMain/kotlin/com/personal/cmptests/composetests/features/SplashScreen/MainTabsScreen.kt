@@ -21,7 +21,7 @@ import compose.icons.fontawesomeicons.solid.*
 
 @Composable
 fun MainTabsScreen() {
-    var selectedIndex by remember { mutableStateOf(0) }
+    var selectedIndex by remember { mutableStateOf(1) }
 
     val tabs = listOf(
         TabItem("Profile", FontAwesomeIcons.Solid.User),
