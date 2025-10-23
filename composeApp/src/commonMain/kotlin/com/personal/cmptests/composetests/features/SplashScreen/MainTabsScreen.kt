@@ -1,6 +1,5 @@
 package com.personal.cmptests.composetests.features.SplashScreen
 
-
 import androidx.compose.foundation.background
 import androidx.compose.material3.*
 import androidx.compose.runtime.*

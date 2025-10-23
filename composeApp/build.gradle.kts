@@ -1,4 +1,4 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -66,6 +66,9 @@ kotlin {
                 implementation(libs.compottie.dot)
                 implementation(libs.compottie.network)
                 implementation(libs.compottie.resources)
+
+                // Image Loading
+                implementation("media.kamel:kamel-image-default:1.0.8")
             }
         }
         val androidMain by getting {
