@@ -26,7 +26,7 @@ fun commonHttpClientConfig(builder: HttpClient.() -> Unit = {}): HttpClient {
             logger = Logger.SIMPLE
             level = LogLevel.ALL
         }
-ww
+
         builder()
     }
 }
