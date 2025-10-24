@@ -66,6 +66,7 @@ fun SignInView(
             )
 
             Spacer(Modifier.height(8.dp))
+
             Text("Ingresar", fontWeight = FontWeight.Bold, fontSize = 20.sp)
 
             Spacer(Modifier.height(16.dp))

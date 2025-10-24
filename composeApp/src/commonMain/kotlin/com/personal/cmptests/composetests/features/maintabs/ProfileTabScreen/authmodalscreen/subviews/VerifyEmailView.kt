@@ -1,5 +1,6 @@
 package com.personal.cmptests.composetests.features.maintabs.ProfileTabScreen.authmodalscreen.subviews
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -22,8 +23,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.kamel.image.KamelImage
-import io.kamel.image.asyncPainterResource
+import composetests.composeapp.generated.resources.Res
+import composetests.composeapp.generated.resources.ubydoc_login
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -45,20 +46,15 @@ fun VerifyEmailView(
                 .padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            KamelImage(
-                resource = asyncPainterResource("drawable/logo-tipo.png"),
-                contentDescription = "Logo",
-                modifier = Modifier.size(150.dp),
+            Image(
+                painter = painterResource(Res.drawable.ubydoc_login),
+                contentDescription = "App Logo",
+                modifier = Modifier.size(120.dp),
                 contentScale = ContentScale.Fit
             )
 
-//            Image(
-//                painter = painterResource("logo_tipo.png"), // Path relative to resources folder
-//                contentDescription = "Logo",
-//                modifier = Modifier.size(150.dp)
-//            )
-
             Text("Verificación de Email", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+
             Spacer(Modifier.height(8.dp))
             Text(
                 "Hemos enviado un código de verificación a $email.\nVerifica tu bandeja de spam si no lo encuentras.",
@@ -78,6 +74,7 @@ fun VerifyEmailView(
             Button(onClick = onVerify, colors = ButtonDefaults.buttonColors(containerColor = Color.Red)) {
                 Text("Verificar", color = Color.White)
             }
+
             Spacer(Modifier.height(8.dp))
             Button(onClick = onResend, colors = ButtonDefaults.buttonColors(containerColor = Color.Red)) {
                 Text("Reenviar código", color = Color.White)
