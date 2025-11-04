@@ -1,4 +1,3 @@
-
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -31,7 +30,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                // ✅ Compose
+                // Compose
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material3)
@@ -41,17 +40,17 @@ kotlin {
                 implementation(libs.androidx.lifecycle.viewmodelCompose)
                 implementation(libs.androidx.lifecycle.runtimeCompose)
 
-                // 🌀 Coroutines + Serialization
+                // Coroutines + Serialization
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.kotlinx.serialization.json)
 
-                // 🌐 Ktor
+                // Ktor
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.content.negotiation)
                 implementation(libs.ktor.serialization.kotlinx.json)
                 implementation(libs.ktor.client.logging)
 
-                // 🧠 Koin
+                // Koin
                 api(libs.koin.core)
                 implementation(libs.koin.compose)
                 implementation(libs.koin.compose.viewmodel)
@@ -62,7 +61,7 @@ kotlin {
                 implementation(libs.precompose)
                 implementation(libs.precompose.viewmodel)
 
-                // 🎨 Icons
+                // Icons
                 implementation("br.com.devsrsouza.compose.icons:font-awesome:1.1.1")
 
                 // Lottie
@@ -81,11 +80,9 @@ kotlin {
                 implementation(compose.preview)
                 implementation(libs.androidx.activity.compose)
 
-                // 🌐 Android Ktor Client
                 implementation(libs.ktor.client.okhttp)
-
-                // 🧠 Koin Android
                 implementation(libs.koin.android)
+                implementation(libs.kotlinx.coroutines.android)
             }
         }
         val iosMain by creating {
@@ -93,12 +90,13 @@ kotlin {
                 implementation(libs.ktor.client.darwin) // 👈 NEW
             }
         }
-        val desktopMain by getting {
-            dependencies {
-                // 🌐 Desktop Ktor Client
-                implementation(libs.ktor.client.java)
-            }
-        }
+//        val desktopMain by getting {
+//            dependencies {
+//                // Desktop Ktor Client
+//                implementation(libs.ktor.client.java)
+//            }
+//        }
+
         val commonTest by getting {
             dependencies {
                 implementation(libs.kotlin.test)

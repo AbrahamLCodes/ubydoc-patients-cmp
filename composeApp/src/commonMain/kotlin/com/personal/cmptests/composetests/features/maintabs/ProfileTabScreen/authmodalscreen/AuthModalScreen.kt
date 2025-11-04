@@ -13,6 +13,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -24,9 +25,11 @@ import androidx.compose.ui.unit.dp
 import com.personal.cmptests.composetests.features.maintabs.ProfileTabScreen.authmodalscreen.subviews.RecoverPasswordView
 import com.personal.cmptests.composetests.features.maintabs.ProfileTabScreen.authmodalscreen.subviews.SignInView
 import com.personal.cmptests.composetests.features.maintabs.ProfileTabScreen.authmodalscreen.subviews.VerifyEmailView
+import com.personal.cmptests.composetests.features.maintabs.ProfileTabScreen.viewmodel.AuthViewModel
 import compose.icons.FontAwesomeIcons
 import compose.icons.fontawesomeicons.Solid
 import compose.icons.fontawesomeicons.solid.ArrowLeft
+import org.koin.compose.koinInject
 
 @Composable
 fun AuthModalScreen(
@@ -42,6 +45,11 @@ fun AuthModalScreen(
 
     var verifyCode by remember { mutableStateOf("") }
     var recoveryEmail by remember { mutableStateOf("") }
+
+    val viewModel: AuthViewModel = koinInject()
+    val authState by viewModel.authState.collectAsState()
+    val isLoading by viewModel.isLoading.collectAsState()
+    val currentView by viewModel.currentView.collectAsState()
 
     Box(
         modifier = Modifier
