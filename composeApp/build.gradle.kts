@@ -73,6 +73,12 @@ kotlin {
 
                 // Image Loading
                 implementation("media.kamel:kamel-image-default:1.0.8")
+
+                // Shared Preferences
+                implementation("com.russhwolf:multiplatform-settings:1.3.0")
+                implementation("com.russhwolf:multiplatform-settings-no-arg:1.3.0")
+                implementation("com.russhwolf:multiplatform-settings-coroutines:1.3.0")
+                implementation("com.russhwolf:multiplatform-settings-serialization:1.3.0")
             }
         }
         val androidMain by getting {

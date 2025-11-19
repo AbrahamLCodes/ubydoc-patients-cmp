@@ -3,6 +3,7 @@ package com.personal.cmptests.composetests
 
 import androidx.compose.runtime.Composable
 import com.personal.cmptests.composetests.di.appModule
+import com.personal.cmptests.composetests.di.prefsModule
 import com.personal.cmptests.composetests.features.MainTabsScreen.SplashScreen
 import com.personal.cmptests.composetests.features.SplashScreen.MainTabsScreen
 import moe.tlaster.precompose.PreComposeApp
@@ -14,7 +15,7 @@ import org.koin.compose.KoinApplication
 @Composable
 fun App() {
     KoinApplication(application = {
-        modules(appModule)
+        modules(appModule, prefsModule)
     }) {
         PreComposeApp {
             val navigator = rememberNavigator()
