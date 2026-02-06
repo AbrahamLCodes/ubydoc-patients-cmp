@@ -37,8 +37,6 @@ kotlin {
                 implementation(compose.ui)
                 implementation(compose.components.resources)
                 implementation(compose.components.uiToolingPreview)
-                implementation(libs.androidx.lifecycle.viewmodelCompose)
-                implementation(libs.androidx.lifecycle.runtimeCompose)
 
                 // Coroutines + Serialization
                 implementation(libs.kotlinx.coroutines.core)
@@ -55,7 +53,7 @@ kotlin {
                 implementation(libs.koin.compose)
                 implementation(libs.koin.compose.viewmodel)
                 implementation(libs.lifecycle.viewmodel)
-                implementation(libs.navigation.compose)
+                // implementation(libs.navigation.compose)
 
                 // Precompose
                 implementation(libs.precompose)
@@ -93,7 +91,7 @@ kotlin {
         }
         val iosMain by creating {
             dependencies {
-                implementation(libs.ktor.client.darwin) // 👈 NEW
+                implementation(libs.ktor.client.darwin)
             }
         }
 //        val desktopMain by getting {
